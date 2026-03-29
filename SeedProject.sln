@@ -5,7 +5,15 @@ VisualStudioVersion = 16.0.37027.11
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{A640AE95-257B-4FFB-95EC-EDC8B01F4E87}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeedEngine", "SeedEngine\SeedEngine.vcxproj", "{F0AD3821-8031-481A-BB51-975D30C95813}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeedEngineSorce", "SeedEngineSorce\SeedEngineSorce.vcxitems", "{81C2C527-9EC2-4DC6-9130-0DE07A41A274}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SeedEngineSorce\SeedEngineSorce.vcxitems*{81c2c527-9ec2-4dc6-9130-0de07a41a274}*SharedItemsImports = 9
+		SeedEngineSorce\SeedEngineSorce.vcxitems*{f0ad3821-8031-481a-bb51-975d30c95813}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -21,6 +29,14 @@ Global
 		{A640AE95-257B-4FFB-95EC-EDC8B01F4E87}.Release|x64.Build.0 = Release|x64
 		{A640AE95-257B-4FFB-95EC-EDC8B01F4E87}.Release|x86.ActiveCfg = Release|Win32
 		{A640AE95-257B-4FFB-95EC-EDC8B01F4E87}.Release|x86.Build.0 = Release|Win32
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Debug|x64.ActiveCfg = Debug|x64
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Debug|x64.Build.0 = Debug|x64
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Debug|x86.ActiveCfg = Debug|Win32
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Debug|x86.Build.0 = Debug|Win32
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Release|x64.ActiveCfg = Release|x64
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Release|x64.Build.0 = Release|x64
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Release|x86.ActiveCfg = Release|Win32
+		{F0AD3821-8031-481A-BB51-975D30C95813}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

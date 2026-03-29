@@ -4,6 +4,17 @@
 #include "framework.h"
 #include "Client.h"
 
+#include "..//SeedEngineSorce/seApplication.h"
+#include "..//SeedEngineSorce/LoadScene.h"
+
+#ifdef _DEBUG
+    #pragma comment(lib, "../x64/Debug/SeedEngine.lib")
+#else
+    #pragma comment(lib, "../x64/Release/SeedEngine.lib")
+#endif
+
+SE::Application application;
+
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -43,15 +54,24 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     MSG msg;
 
     // 기본 메시지 루프입니다:
-    while (GetMessage(&msg, nullptr, 0, 0))
+    while (true)
     {
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
         {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+            if (msg.message == WM_QUIT)
+                break;
+
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+        }
+        else
+        {
+            application.Run();
         }
     }
-
     return (int) msg.wParam;
 }
 
@@ -97,8 +117,14 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
+   const UINT width = 800;
+   const UINT height = 600;
+
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+       CW_USEDEFAULT, 0, width, height, nullptr, nullptr, hInstance, nullptr);
+
+
+   application.Initialize(hWnd, width, height);
 
    if (!hWnd)
    {
@@ -107,6 +133,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+
+   SE::LoadScene();
 
    return TRUE;
 }

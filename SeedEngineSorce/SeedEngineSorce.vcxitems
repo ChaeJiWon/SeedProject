@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{81c2c527-9ec2-4dc6-9130-0de07a41a274}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LoadScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seTime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seTime.cpp" />
+  </ItemGroup>
+</Project>

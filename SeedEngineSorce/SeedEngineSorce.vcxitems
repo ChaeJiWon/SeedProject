@@ -22,6 +22,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)seEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seSceneManager.h" />

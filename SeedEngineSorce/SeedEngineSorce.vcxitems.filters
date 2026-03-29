@@ -89,5 +89,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)LoadScene.h">
       <Filter>Scene\Util</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seMath.h">
+      <Filter>99. Common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

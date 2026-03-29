@@ -1,8 +1,13 @@
 ﻿// Client.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
 
 #include "framework.h"
 #include "Client.h"
+
+
 
 #include "..//SeedEngineSorce/seApplication.h"
 #include "..//SeedEngineSorce/LoadScene.h"
@@ -13,7 +18,7 @@
     #pragma comment(lib, "../x64/Release/SeedEngine.lib")
 #endif
 
-SE::Application application;
+se::Application application;
 
 #define MAX_LOADSTRING 100
 
@@ -33,6 +38,25 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ LPWSTR    lpCmdLine,
                      _In_ int       nCmdShow)
 {
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+    
+    // #Test 1
+    // _CrtSetBreakAlloc(158); // 158번째 메모리 할당에서 디버거를 중단시킴
+
+    // #Test 2
+    // _CrtMemState s1, s2, s3;
+    // 
+    // _CrtMemCheckpoint(&s1); // 현재 상태 저장
+    // 
+    // // ... 의심되는 코드 영역 ...
+    // 
+    // _CrtMemCheckpoint(&s2); // 이후 상태 저장
+    // 
+    // if (_CrtMemDifference(&s3, &s1, &s2)) {
+    //     _CrtMemDumpStatistics(&s3); // 차이점 출력
+    // }
+
+
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
@@ -96,7 +120,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_CLIENT));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_CLIENT);
+    wcex.lpszMenuName = nullptr;// = MAKEINTRESOURCEW(IDC_CLIENT);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
@@ -135,7 +159,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    UpdateWindow(hWnd);
 
 
-   SE::LoadScene();
+   se::LoadScene();
 
    return TRUE;
 }

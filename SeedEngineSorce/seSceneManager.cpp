@@ -28,14 +28,20 @@ namespace se
 	}
 	void SceneManager::Update()
 	{
+		if (nullptr == mActiveScene)
+			return;
 		mActiveScene->Update();
 	}
 	void SceneManager::LateUpdate()
 	{
+		if (nullptr == mActiveScene)
+			return;
 		mActiveScene->LateUpdate();
 	}
 	void SceneManager::Render()
 	{
+		if (nullptr == mActiveScene)
+			return;
 		mActiveScene->Render();
 	}
 }

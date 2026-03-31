@@ -1,13 +1,20 @@
 #pragma once
-#include "seEntity.h"
+#include "CommonInclude.h"
+#include "seComponent.h"
 
 namespace se
 {
-	class Component;
-
 	class GameObject : public Entity
 	{
-	public:
+	public:	
+		enum class eState
+		{
+			Active,
+			Paused,
+			Dead,
+			End
+		};
+
 		GameObject();
 		virtual ~GameObject();
 
@@ -21,9 +28,11 @@ namespace se
 		T* AddComponent()
 		{
 			T* comp = new T();
-			comp->SetOwner(this);
 			comp->Initialize();
-			mComponents.push_back(comp);
+			comp->SetOwner(this);
+
+			mComponents[static_cast<UINT>(comp->GetType())] = comp;
+
 			return comp;
 		}
 
@@ -41,6 +50,25 @@ namespace se
 			return component;
 		}
 
+		eState GetState() const { return mState; }
+
+		void SetActive(bool power)
+		{
+			if (power == true) mState = eState::Active;
+			if (power == false) mState = eState::Paused;
+		}
+
+		bool IsActive() const { return mState == eState::Active; }
+		bool IsDead() const { return mState == eState::Dead; }
+		eLayerType GetLayerType() const { return mLayerType; }
+		void SetLayerType(const eLayerType layerType) { mLayerType = layerType; }
+
+	private:
+		void initializeTransform();
+		void death() { mState = eState::Dead; }
+
+		eState mState;
 		std::vector<Component*> mComponents;
+		eLayerType mLayerType;
 	};
 }

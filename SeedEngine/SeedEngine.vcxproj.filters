@@ -1,2 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{ebef9a97-9aac-4fbb-8e95-217044fd9ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Util">
+      <UniqueIdentifier>{ea32cf7f-a421-4c63-8654-5d86b569307f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="seLoadScenes.cpp">
+      <Filter>Scenes\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="seLoadingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="seTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="seLoadScenes.h">
+      <Filter>Scenes\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="seLoadingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="seTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

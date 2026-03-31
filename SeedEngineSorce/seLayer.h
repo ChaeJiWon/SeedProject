@@ -15,11 +15,19 @@ namespace se
 		virtual void Update();
 		virtual void LateUpdate();
 		virtual void Render();
+		virtual void Destroy();
 
 		void AddGameObject(GameObject* gameObject);
+		void EraseGameObject(GameObject* eraseGameObj);
+		std::vector<GameObject*>& GetGameObjects() { return mGameObjects; }
 
 	private:
-		//eLayerType mType;
+		void findDeadGameObjects(OUT std::vector<GameObject*>& gameObjects);
+		void deleteGameObjects(std::vector<GameObject*> gameObjects);
+		void eraseDeadGameObject();
+
 		std::vector<GameObject*> mGameObjects;
 	};
+
+	using GameObjectIter = std::vector<GameObject*>::iterator;
 }

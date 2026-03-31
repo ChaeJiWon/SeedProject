@@ -1,0 +1,53 @@
+#pragma once
+#include "seComponent.h"
+
+namespace se
+{
+	using namespace se::math;
+
+	class Camera : public Component
+	{
+	public:
+		enum class eProjectionType
+		{
+			Perspective,
+			Orthographic
+		};
+
+		static Matrix GetGpuViewMatrix() { return ViewMatrix; }
+		static Matrix GetGpuProjectionMatrix() { return ProjectionMatrix; }
+		static void SetGpuViewMatrix(const Matrix& matrix) { ViewMatrix = matrix; }
+		static void SetGpuProjectionMatrix(const Matrix& matrix) { ProjectionMatrix = matrix; }
+
+		Camera(HWND hwnd);
+		virtual ~Camera();
+
+		void Initialize() override;
+		void Update() override;
+		void LateUpdate() override;
+		void Render() override;
+
+		void CreateViewMatrix();
+		void CreateProjectionMatrix(eProjectionType type);
+
+		Matrix GetViewMatrix() { return mViewMatrix; }
+		Matrix GetProjectionMatrix() { return mProjectionMatrix; }
+		void SetProjectionType(const eProjectionType type) { mProjectionType = type; }
+		void SetSize(const float size) { mSize = size; }
+
+	private:
+		static Matrix ViewMatrix;
+		static Matrix ProjectionMatrix;
+
+		eProjectionType mProjectionType;
+
+		HWND mHwnd;
+
+		Matrix mViewMatrix;
+		Matrix mProjectionMatrix;
+		float mAspectRatio;
+		float mNear;
+		float mFar;
+		float mSize;
+	};
+}

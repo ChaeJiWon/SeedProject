@@ -3,12 +3,14 @@
 
 namespace se
 {
+	using namespace enums;
+
 	class GameObject;
 
 	class Component : public Entity
 	{
 	public:
-		Component();
+		Component(eComponentType type);
 		virtual ~Component();
 
 		virtual void Initialize();
@@ -16,9 +18,13 @@ namespace se
 		virtual void LateUpdate();
 		virtual void Render();
 
-		void SetOwner(GameObject* owner) { mOwner = owner; };
-		GameObject* GetOwner() { return mOwner; }
+		eComponentType GetType() const { return mType; }
+
+		GameObject* GetOwner() const { return mOwner; }
+		void SetOwner(GameObject* owner) { mOwner = owner; }
+
 	private:
 		GameObject* mOwner;
+		eComponentType mType;
 	};
 }

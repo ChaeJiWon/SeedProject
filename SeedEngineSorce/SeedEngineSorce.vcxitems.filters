@@ -28,8 +28,53 @@
     <Filter Include="Scene\Manager">
       <UniqueIdentifier>{1ced3ef6-5dd0-460f-aa15-3dec3118884b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scene\Util">
-      <UniqueIdentifier>{29c19d10-3f22-4108-8131-ce2348145465}</UniqueIdentifier>
+    <Filter Include="GraphicDevice‎">
+      <UniqueIdentifier>{f39cddec-3caf-4caf-a7f1-0efa56fa9a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\DontDestoryOnLoad">
+      <UniqueIdentifier>{6aaf209f-96d4-4c8e-8a2e-876819a75da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Transform">
+      <UniqueIdentifier>{7abd1909-b922-46e6-83a3-aeace1d80944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{450f7e09-0a02-4ab3-8be3-f75174e6a86c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{ec5ee943-2da0-4c03-b5d0-d99aef9359e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{98f906bf-754f-48f5-b2c8-e048a976ad09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Resources">
+      <UniqueIdentifier>{c3aed2d0-545f-492a-97af-d4bbbdd33351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Mesh">
+      <UniqueIdentifier>{ff2bd5ce-b624-4690-94cd-66557654b661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Buffer">
+      <UniqueIdentifier>{c8ec4262-3039-42a8-beb7-22f8738a0a4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Buffer\IndexBuffer">
+      <UniqueIdentifier>{7bdd1998-30ec-4930-b1bd-2324bc5a74ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Buffer\VertexBuffer">
+      <UniqueIdentifier>{0a62c7ff-5a94-454c-b151-457b40e9dfc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Buffer\InputLayout">
+      <UniqueIdentifier>{8fd0fadd-de8e-4263-b60a-a34bd0e76513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Shader">
+      <UniqueIdentifier>{cfe4b342-4da6-4c0e-9428-8bf8af87f56d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Material">
+      <UniqueIdentifier>{d59551d2-4989-4322-886b-6e774207a825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{46e8c9f3-a730-4760-b12d-cb92b9db481f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Buffer\ConstantBuffer">
+      <UniqueIdentifier>{dabb6e1f-7a93-4d81-af9d-23c5a0395be4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +98,55 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)seSceneManager.cpp">
       <Filter>Scene\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seMath.cpp">
+      <Filter>99. Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seGraphicDevice_DX11.cpp">
+      <Filter>GraphicDevice‎</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seDontDestoryOnLoad.cpp">
+      <Filter>Scene\DontDestoryOnLoad</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seTransform.cpp">
+      <Filter>Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seCamera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seResources.cpp">
+      <Filter>Resource\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seMesh.cpp">
+      <Filter>Resource\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seIndexBuffer.cpp">
+      <Filter>Resource\Buffer\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seVertexBuffer.cpp">
+      <Filter>Resource\Buffer\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seInputLayout.cpp">
+      <Filter>Resource\Buffer\InputLayout</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seShader.cpp">
+      <Filter>Resource\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seMaterial.cpp">
+      <Filter>Resource\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seTexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)seConstantBuffer.cpp">
+      <Filter>Resource\Buffer\ConstantBuffer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,11 +180,57 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)seSceneManager.h">
       <Filter>Scene\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)LoadScene.h">
-      <Filter>Scene\Util</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)seMath.h">
       <Filter>99. Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seGraphicDevice_DX11.h">
+      <Filter>GraphicDevice‎</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seGraphics.h">
+      <Filter>GraphicDevice‎</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seDontDestoryOnLoad.h">
+      <Filter>Scene\DontDestoryOnLoad</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seTransform.h">
+      <Filter>Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seCamera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seResources.h">
+      <Filter>Resource\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seMesh.h">
+      <Filter>Resource\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seIndexBuffer.h">
+      <Filter>Resource\Buffer\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seVertexBuffer.h">
+      <Filter>Resource\Buffer\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seInputLayout.h">
+      <Filter>Resource\Buffer\InputLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seShader.h">
+      <Filter>Resource\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seMaterial.h">
+      <Filter>Resource\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)seConstantBuffer.h">
+      <Filter>Resource\Buffer\ConstantBuffer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

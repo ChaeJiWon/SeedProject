@@ -15,27 +15,58 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)LoadScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seComponent.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seConstantBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seDontDestoryOnLoad.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seGameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seGraphicDevice_DX11.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seGraphics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seIndexBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seInputLayout.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seMaterial.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seMesh.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seShader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)seTime.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seTransform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)seVertexBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)seApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)seComponent.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seConstantBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seDontDestoryOnLoad.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)seEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)seGameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seGraphicDevice_DX11.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seIndexBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seInputLayout.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)seLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seMaterial.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seMesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)seScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)seSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seShader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)seTime.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seTransform.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)seVertexBuffer.cpp" />
   </ItemGroup>
 </Project>

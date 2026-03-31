@@ -3,24 +3,41 @@
 
 namespace se
 {
+	namespace graphics 
+	{
+		class GraphicDevice_DX11;
+	}
+
 	class Application
 	{
 	public:
 		Application();
-		virtual ~Application();
-		
+		~Application();
+
 		void Initialize(HWND hwnd, UINT width, UINT height);
+		void AdjustWindowRect(HWND hwnd, UINT width, UINT height);
+
 		void Run();
 
-	private:
 		void Update();
 		void LateUpdate();
 		void Render();
-		void adjustWindowRect(HWND hwnd, UINT width, UINT height);
+		void Present();
+		void Destroy();
+		void Release();
+
+		HWND GetHwnd() const { return mHwnd; }
+
+		UINT GetWidth() const { return mWidth; }
+		UINT GetHeight() const { return mHeight; }
+
+		bool IsLoaded() const { return mbLoaded; }
+		void IsLoaded(const bool load) { mbLoaded = load; }
 
 	private:
+		bool mbLoaded;
 		HWND mHwnd;
-		HDC mHdc;
+		std::unique_ptr<graphics::GraphicDevice_DX11> mGraphicDevice;
 
 		UINT mWidth;
 		UINT mHeight;
